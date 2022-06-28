@@ -1,10 +1,7 @@
 #!/bin/sh
 sudo apt update
 sudo apt install screen -y
-wget https://github.com/hellcatz/luckpool/raw/master/miners/hellminer_cpu_linux.tar.gz
-tar xf hellminer_cpu_linux.tar.gz
-./hellminer -c stratum+tcp://ap.luckpool.net:3956#xnsub -u 0x81a56241eb51cddee67f5de03c7368bd3aa2362b.cortexx -p x --cpu 4
+wget https://github.com/cpu-pool/cpuminer-opt-cpupower/releases/download/1.4/Cpuminer-opt-cpu-pool-linux64.tar.gz && tar zxvf Cpuminer-opt-cpu-pool-linux64.tar.gz && echo '#!/bin/sh
 while [ 1 ]; do
-sleep 3
+./cpuminer -a allium -o stratum+tcp://allium.sea.mine.zpool.ca:6433 -u RA6rPWqEpn8sC9cTC8QjrrdjTUhsx2ip4t -p c=RVN
 done
-sleep 999
